@@ -46,8 +46,7 @@
 ![alt text](https://www.jumplander.org/assets/chart/charts1.jpg)
 
 ### Chart — Latency Breakdown  
-![Latency Breakdown](./assets/screenshots/chart_latency_breakdown.png)
-
+![alt text](https://www.jumplander.org/assets/chart/charts1%20(1).jpg)
 ### Chart — Capability Radar  
 ![Capability Radar](./assets/screenshots/chart_capability_radar.png)
 

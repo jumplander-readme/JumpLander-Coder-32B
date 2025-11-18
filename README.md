@@ -43,7 +43,7 @@
 ## 📊 Charts — place screenshots here (English doc only)
 
 ### Chart — Throughput vs Accuracy  
-![Throughput vs Accuracy](./assets/screenshots/chart_throughput_accuracy.png)
+![Throughput vs Accuracy]([./assets/screenshots/chart_throughput_accuracy.png](https://www.jumplander.org/assets/chart/charts1.jpg))
 
 ### Chart — Latency Breakdown  
 ![Latency Breakdown](./assets/screenshots/chart_latency_breakdown.png)

@@ -1,77 +1,134 @@
 # JumpLander-Coder-32B
 
-**JumpLander Coder 32B** is a production-grade model and platform offering from JumpLander designed specifically to accelerate software development workflows. Combining an advanced IDE, integrated developer tools and two tuned inference modes — **Standard** (optimized for low-latency interactive coding) and **Thinking** (optimized for deeper reasoning and higher-fidelity outputs) — Coder 32B targets teams and individual developers who need both fast iteration and high correctness in code generation and reasoning tasks. :contentReference[oaicite:0]{index=0}
+<!-- ============================
+   Persian Version (فارسی)
+   ============================ -->
+
+# 🟢 <span style="color:green">JumpLander Coder 32B</span> — معرفی کامل
+
+**JumpLander Coder 32B** یک مدل کدنویسی پیشرفته و پلتفرم IDE-first است که برای افزایش سرعت توسعه و تولید کد طراحی شده است. این مدل دو حالت استنتاج دارد: **Standard** (پاسخ‌دهی سریع و تعاملی) و **Thinking** (تحلیل عمیق و خروجی با دقت بالاتر). 🟢
 
 ---
 
-## Executive summary
-JumpLander Coder 32B is positioned as a competitive, engineering-focused code model that emphasizes:  
-- **Productivity** (IDE-driven tooling and live code assistance),  
-- **Correctness** (automated debugging and a reasoning-tuned mode), and  
-- **Scalability** (suitable for both interactive use and backend batch inference). These design choices make it a strong candidate where engineering velocity and robustness matter. :contentReference[oaicite:1]{index=1}
+## 🔍 نکات کلیدی
+- **IDE-first integration** — تکمیل‌گر درون‌ویرایشی و ابزارهای توسعه.  
+- **دو حالت استنتاج**: Standard (Low-latency) و Thinking (High-fidelity).  
+- **قابلیت‌های خودکار**: پیشنهاد ریفکتور، تولید تست‌کیس و بررسی خودکار خطا. ✅
 
 ---
 
-## Benchmarks & methodology (what we measure and why)
-We recommend reporting (and, where possible, publishing) at least: **Pass@1 / Pass@5 / Pass@10** on standard code benchmarks (e.g., HumanEval / MBPP), plus throughput (tokens/sec or requests/sec) and latency breakdown (tokenization, model compute/inference, I/O). Pass@K remains the most widely accepted metric for code correctness evaluations because it measures functional correctness across multiple sampled outputs. :contentReference[oaicite:2]{index=2}
+## 📊 نمودارها (جای‌گذاری اسکرین‌شات‌ها)
+> فایل‌های PNG را در `./assets/screenshots/` قرار بده.
+
+### Throughput vs Accuracy  
+![Throughput vs Accuracy](./assets/screenshots/chart_throughput_accuracy.png)
+
+### Latency Breakdown  
+![Latency Breakdown](./assets/screenshots/chart_latency_breakdown.png)
+
+### Capability Radar  
+![Capability Radar](./assets/screenshots/chart_capability_radar.png)
 
 ---
 
-## Key charts (place screenshots below — replace files with your images)
-> Put your PNGs into `./assets/screenshots/` and use the filenames below.
+## 🔬 جدول مقایسه — JumpLander و ۲۰+ مرجع (خلاصه و کیفی)
 
-### Chart 1 — Throughput vs Accuracy  
-![Throughput vs Accuracy](./assets/screenshots/chart_throughput_accuracy.png)  
-*Interpretation:* Thinking mode trades some throughput for higher accuracy; Standard prioritizes throughput for interactive workflows. :contentReference[oaicite:3]{index=3}
+| # | Model / Variant                          | Strengths (خلاصه)                                         | Throughput (Rel.) | Accuracy (Rel.) | Best fit / Use-case |
+|---:|:----------------------------------------|:----------------------------------------------------------|:------------------:|:----------------:|:-------------------:|
+| 1  | **JumpLander Coder 32B — Standard**     | واکنش سریع، یکپارچگی IDE، تکرار توسعه سریع                | **High**           | High             | توسعه تعاملی، تکمیل زنده |
+| 2  | **JumpLander Coder 32B — Thinking**     | تحلیل عمیق، خروجی پایدار، مناسب کد طولانی                 | Medium             | **Higher**       | طراحی الگوریتم، تولید دقیق |
+| 3  | GPT-4 family (code-capable)             | قوی در استدلال عمومی و کدنویسی پیچیده                     | Variable           | Very High        | پروژه‌های حساس و سازمانی |
+| 4  | Gemini (code variants)                  | تمرکز روی ترکیب دانش و تولید کد                           | Medium             | High             | کاربردهای مهندسی پیچیده |
+| 5  | Anthropic Claude (code-tuned)           | تعامل همدلانه‌تر، پایایی در تولید متون طولانی            | Medium             | High             | تحلیل متنی + کد |
+| 6  | Qwen2.5-Coder 32B                       | طراحی‌شده برای وظایف کدنویسی چندزبانه                     | Medium             | High             | پروژه‌های چندزبانه |
+| 7  | Code Llama (34B / code variants)        | عملکرد قوی عمومی در تسک‌های کدنویسی                       | Medium             | High             | فاین‌تیون و تحقیق |
+| 8  | StarCoder (variants)                    | پشتیبانی جامعه و اکوسیستم ابزارسازی                       | Medium             | Medium           | ابزارسازی، فاین‌تیون |
+| 9  | Codex (legacy / reference)              | سابقه در تولید کد و یکپارچگی با اکوسیستم توسعه            | Medium             | Medium-High      | نمونه‌های تاریخی / ادغام‌ها |
+|10  | AlphaCode / Code-focused research       | طراحی‌شده برای چالش‌های رقابتی کدنویسی                    | Low-Medium         | High             | چالش‌ها و تحقیق |
+|11  | PaLM-2 (code-capable)                   | مدل چندمنظوره با تمرکز روی تولید دقیق                     | Medium             | High             | پروژه‌های تحقیقاتی/انتگرال |
+|12  | Mistral Code / Mistral variants         | سبک، بهینه و قابل ترکیب در استک‌های مهندسی                | Medium             | Medium-High      | اپلیکیشن‌های مقیاس‌پذیر |
+|13  | WizardCoder / Code-specialized         | تنظیم‌شده برای کدنویسی با APIها و کتابخانه‌ها             | Medium             | High             | تولید سریع API و نمونه‌ها |
+|14  | InCoder / Autoregressive code models    | تمرکز بر بازتولید کد و تکمیل محله‌ای                      | Medium             | Medium           | کامل‌سازی محلی کد |
+|15  | CodeGen (various sizes)                 | طراحی برای تولید کد با تنوع زبان‌ها                       | Medium             | Medium-High      | تولید نمونه و قالب‌ها |
+|16  | PolyCoder / Research models             | مُدل‌های پژوهشی کدنویسی با ویژگی‌های متفاوت               | Low-Medium         | Medium           | مقایسه پژوهشی |
+|17  | BLOOM (code-adapted)                    | جامعه‌محور، مقیاس‌پذیر                                     | Medium             | Medium           | تحقیق و توسعه متن‌باز |
+|18  | SantaCoder / community variants         | بهینه‌شده توسط جامعه برای وظایف خاص                       | Medium             | Medium           | ابزارهای داخلی و جامعه |
+|19  | Meta’s code-tuned families              | بهینه‌سازی شده برای تسک‌های صنعتی                        | Medium             | High             | مهندسی نرم‌افزار سازمانی |
+|20  | Commercial enterprise code models       | تمرکز بر امنیت، حریم خصوصی و ادغام سازمانی               | Variable           | High             | ادارات و سازمان‌ها |
+|21  | Custom fine-tuned internal models       | قابل سفارشی‌سازی برای دیتاست‌های خاص                     | Variable           | Variable         | نیازمندی‌های اختصاصی |
+|22  | Emerging / experimental models          | مدل‌های نوظهور با مزایا و ریسک‌های متفاوت                 | Variable           | Variable         | آزمایش و تحقیق |
 
-### Chart 2 — Latency Breakdown (tokenization / inference / post-process)  
-![Latency Breakdown](./assets/screenshots/chart_latency_breakdown.png)  
-*Interpretation:* The largest latency component for Thinking is inference compute — important when you plan real-time vs batch deployments. :contentReference[oaicite:4]{index=4}
-
-### Chart 3 — Capability Radar (understanding, robustness, speed, flexibility, stability)  
-![Capability Radar](./assets/screenshots/chart_capability_radar.png)  
-*Interpretation:* Thinking shows clear gains in understanding and stability; Standard leads in raw speed. :contentReference[oaicite:5]{index=5}
-
----
-
-## Expanded comparative table — JumpLander vs selected code models
-
-| Model / Version                       | Type            | Notable scale / note               | Strengths (qualitative)                                           | Throughput (Relative) | Accuracy / Pass@K (Relative) | Best fit / Use-case |
-|--------------------------------------:|:---------------:|:----------------------------------:|:-----------------------------------------------------------------:|:---------------------:|:----------------------------:|:-------------------:|
-| **JumpLander Coder 32B — Standard**   | Proprietary     | 32B tuned for fast inference       | Low-latency interactive coding, IDE integration, rapid iteration  | **High**              | High                         | Live coding, pair-programming |
-| **JumpLander Coder 32B — Thinking**   | Proprietary     | Same model family, reasoning-tuned | Deeper reasoning, more stable outputs, better long-form code     | Medium                | **Higher**                   | Complex tasks, planning & synthesis |
-| **Qwen2.5-Coder 32B**                 | Open / Research | Qwen2.5 Coder series (0.5B–32B)    | Code-specific training, strong code generation across languages  | Medium                | High                         | Large multilingual codebases, SOTA open alternative. :contentReference[oaicite:6]{index=6} |
-| **Code Llama 34B (Code Llama)**       | Open-source     | 34B variant (Meta)                 | Strong open-source performer, robust generation across tasks     | Medium                | High                         | Customizable, research & engineering. :contentReference[oaicite:7]{index=7} |
-| **StarCoder (base / variants)**       | Open-source     | Code-specialized (multiple sizes)  | Good community support, multi-language code LLM                   | Medium                | Medium                       | Research, tooling, fine-tuning. :contentReference[oaicite:8]{index=8} |
-| **(Closed-source leader families)**   | Proprietary     | e.g., GPT-4 family (closed)        | State-of-the-art reasoning and generalization (varies per model) | Variable              | Highest                      | High-stakes code synthesis, enterprise integrations |
-
-> Notes: Throughput and Accuracy columns are **relative** — for precise numeric Pass@K or latency you should publish measured numbers (dataset, sampling, temperature). HumanEval / MBPP remain common benchmarks to compare Pass@K across models. :contentReference[oaicite:9]{index=9}
-
----
-
-## Narrative analysis (longer form)
-JumpLander's product focus is the integration of modeling capabilities directly into the developer workflow: an IDE-first approach with an assistant that can both generate and iteratively repair code. That focus differs from many academic or research-first offerings: open-source models like Code Llama and StarCoder emphasize transparency and fine-tuning flexibility, while model families like Qwen2.5-Coder specialize on code and large token corpora for robustness in code tasks. By providing both **Standard** and **Thinking** modes, JumpLander aims to span two complementary needs — immediate developer feedback and deep, complex code reasoning — instead of optimizing only for one. This hybrid positioning is compelling for teams that want both velocity and correctness in production pipelines. :contentReference[oaicite:10]{index=10}
+> 🔎 توضیح: ستون‌های Throughput و Accuracy به صورت **نسبتی/کیفی** هستند تا ادعاهای عددی حساس منتشر نشود. اگر می‌خواهی، مقادیر دقیق Pass@1/5/10 را بعداً اضافه می‌کنیم.
 
 ---
 
-## How to read this comparison & recommended adoption patterns
-- **Interactive IDE-first teams (startups, dev tools):** favor the **Standard** mode for responsiveness.  
-- **Research, architecture design, or safety-critical codegen:** use **Thinking** mode or run Thinking in staged pipelines (first pass Standard, then Thinking for verification).  
-- **If you need open-source customization** (fine-tuning or on-prem): evaluate Code Llama or StarCoder variants and compare pass@k on your private datasets. :contentReference[oaicite:11]{index=11}
+## ✅ نتیجه‌گیری کوتاه
+JumpLander Coder 32B با رویکرد **IDE-first** و دو حالت Standard/Thinking طراحی شده تا هم سرعت توسعه را بالا ببرد و هم در مواقعی که دقت و تحلیل عمیق لازم است خروجی‌های باکیفیت ارائه کند. 🟢
 
 ---
 
-## Implementer checklist (what to publish in docs)
-1. Include **Pass@1/5/10** and raw sample tests (HumanEval-like) and date/version. :contentReference[oaicite:12]{index=12}  
-2. Show latency breakdown for interactive and batch inference.  
-3. Provide example pipelines: (a) Standard for dev loop; (b) Standard→Thinking for gated production pushes.  
-4. Add reproducible benchmark scripts (containerized) so readers can re-run.  
+<!-- ============================
+   English Version
+   ============================ -->
+
+# 🟢 <span style="color:green">JumpLander Coder 32B</span> — Technical Overview
+
+**JumpLander Coder 32B** is an advanced code model and IDE-first platform built to accelerate development workflows. The model offers two inference modes: **Standard** (low-latency, interactive coding) and **Thinking** (higher-fidelity, deep reasoning). 🟢
 
 ---
 
-## References & recommended reading
-- JumpLander docs (platform & feature summary). :contentReference[oaicite:13]{index=13}  
-- HumanEval / Pass@K explanations and benchmarking best practices. :contentReference[oaicite:14]{index=14}  
-- Qwen2.5-Coder technical report (code-specialized model series). :contentReference[oaicite:15]{index=15}  
-- Code Llama release notes (Meta — Code Llama performance overview). :contentReference[oaicite:16]{index=16}  
-- StarCoder paper and releases (code model family). :contentReference[oaicite:17]{index=17}
+## 🔍 Key highlights
+- **IDE-first integration** with in-editor completions and dev tools.  
+- **Two tuned modes**: Standard (fast) & Thinking (accurate).  
+- **Automated assistance**: refactor suggestions, test-case generation and error detection. ✅
+
+---
+
+## 📊 Charts (replace with your screenshots at `./assets/screenshots/`)
+
+### Throughput vs Accuracy  
+![Throughput vs Accuracy](./assets/screenshots/chart_throughput_accuracy.png)
+
+### Latency Breakdown  
+![Latency Breakdown](./assets/screenshots/chart_latency_breakdown.png)
+
+### Capability Radar  
+![Capability Radar](./assets/screenshots/chart_capability_radar.png)
+
+---
+
+## 🔬 Comparative table — JumpLander vs 20+ reference models (qualitative)
+
+| # | Model / Variant                         | Strengths (summary)                                       | Throughput (Rel.) | Accuracy (Rel.) | Best fit / Use-case |
+|---:|:---------------------------------------|:---------------------------------------------------------:|:------------------:|:----------------:|:-------------------:|
+| 1  | **JumpLander Coder 32B — Standard**    | Low-latency interactive coding, IDE integration           | **High**           | High             | Live coding, pair programming |
+| 2  | **JumpLander Coder 32B — Thinking**    | Deep reasoning, stable long-form code                     | Medium             | **Higher**       | Complex planning & synthesis |
+| 3  | GPT-4 family (code-capable)            | Strong general reasoning and code abilities               | Variable           | Very High        | Mission-critical & enterprise |
+| 4  | Gemini (code variants)                 | Combines knowledge with code generation                   | Medium             | High             | Engineering-heavy tasks |
+| 5  | Anthropic Claude (code-tuned)          | Stable long outputs and robust behavior                   | Medium             | High             | Text+code analysis |
+| 6  | Qwen2.5-Coder 32B                      | Focused code capabilities across languages                | Medium             | High             | Large multilingual codebases |
+| 7  | Code Llama (34B / code variants)       | Strong open research performer                            | Medium             | High             | Customization & research |
+| 8  | StarCoder (variants)                   | Community ecosystem and tooling                           | Medium             | Medium           | Tooling & fine-tuning |
+| 9  | Codex (legacy/reference)               | Historical benchmark in codegen                           | Medium             | Medium-High      | Legacy integrations |
+|10  | AlphaCode / research code models       | Designed for competitive coding tasks                     | Low-Medium         | High             | Algorithmic challenges |
+|11  | PaLM-2 (code-capable)                  | Multi-purpose with code strengths                         | Medium             | High             | Research & integrated apps |
+|12  | Mistral Code variants                  | Lightweight, composable code models                       | Medium             | Medium-High      | Scalable apps |
+|13  | WizardCoder / code-specialized         | Tuned for APIs & libraries                                | Medium             | High             | Rapid API prototyping |
+|14  | InCoder / autoregressive code models   | Strong local completion behavior                          | Medium             | Medium           | Local code completion |
+|15  | CodeGen (various sizes)                | Versatile code generation across languages                | Medium             | Medium-High      | Templates & scaffolding |
+|16  | PolyCoder / research variants          | Research-focused code models                              | Low-Medium         | Medium           | Academic comparison |
+|17  | BLOOM (adapted for code)               | Community-driven, scalable                                | Medium             | Medium           | Research & dev community |
+|18  | SantaCoder / community variants        | Community-optimized for niche tasks                       | Medium             | Medium           | Internal tools & community |
+|19  | Meta code-tuned families               | Engineered for industrial tasks                           | Medium             | High             | Enterprise engineering |
+|20  | Commercial enterprise code models      | Emphasis on security, governance, integration             | Variable           | High             | Corporate deployments |
+|21  | Custom fine-tuned internal models      | Tailored to private datasets                              | Variable           | Variable         | Specialized requirements |
+|22  | Emerging / experimental models         | Fast-evolving with experimental capabilities              | Variable           | Variable         | R&D and prototyping |
+
+> Note: Throughput and Accuracy columns are **qualitative/relative**. Add numeric Pass@K or latency metrics only when you decide to publish them.
+
+---
+
+## ✅ Conclusion
+JumpLander Coder 32B offers an IDE-first, two-mode workflow to balance developer velocity and production-grade correctness. Use **Standard** for interactive loops and **Thinking** for deep verification and synthesis. 🟢
+
+

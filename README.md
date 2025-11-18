@@ -93,7 +93,6 @@
 
 ## 📦 Distribution & license
 - See `LICENSE` for repository terms.  
-- For access, partnerships or evaluations: `contact@jumplander.org`.
 
 ---
 

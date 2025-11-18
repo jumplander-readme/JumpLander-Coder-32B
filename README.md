@@ -41,7 +41,6 @@
 ---
 
 ## 📊 Charts — place screenshots here (English doc only)
-> Upload PNGs to `./assets/screenshots/` and keep filenames as below or update.
 
 ### Chart — Throughput vs Accuracy  
 ![Throughput vs Accuracy](./assets/screenshots/chart_throughput_accuracy.png)

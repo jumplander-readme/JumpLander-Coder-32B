@@ -152,5 +152,3 @@
 - شرایط در فایل `LICENSE` درج می‌شود.  
 
 ---
-
-*Prepared with care — keep numeric benchmarks private until you are ready to publish.*  

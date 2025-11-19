@@ -53,7 +53,6 @@
 ---
 
 ## 🔬 Comparative table — JumpLander Coder 32B (Standard) vs references (qualitative)
-> This table is intentionally qualitative. Add numeric Pass@K / latency cells only when you decide to publish validated numbers.
 
 | #  | Model / Variant                       | Primary strengths                                    | Throughput (Rel.) | Accuracy (Rel.) | Typical use-case |
 |---:|:-------------------------------------|:----------------------------------------------------:|:------------------:|:----------------:|:----------------:|
@@ -78,8 +77,6 @@
 |19  | Commercial enterprise code models    | Security, governance, integration focus              | Variable           | High             | Corporate deployments |
 |20  | Custom fine-tuned internal models    | Tailored to private datasets                         | Variable           | Variable         | Specialized needs |
 |21  | Emerging & experimental models       | Rapid innovation, variable maturity                  | Variable           | Variable         | R&D and prototyping |
-
-> ⚠️ Note: Throughput and Accuracy are **qualitative** here to avoid publishing sensitive numeric claims.
 
 ---
 

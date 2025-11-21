@@ -85,7 +85,6 @@
 - **CI / pre-merge checks:** combine completions with generated tests for automated validation.  
 - **Scaling:** deploy low-latency instances near editors; route heavy workloads to scaled inference pools.
 
----
 ## Contributors
 [![Username](https://github.com/osodyssey.png?size=200)](https://github.com/osodyssey)
 

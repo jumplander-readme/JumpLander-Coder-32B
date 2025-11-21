@@ -86,13 +86,14 @@
 - **Scaling:** deploy low-latency instances near editors; route heavy workloads to scaled inference pools.
 
 ---
+## Contributors
+- [Username](https://github.com/osodyssey)
 
 ## 📦 Distribution & license
 - See `LICENSE` for repository terms.  
 
----
-## Contributors
-- [Username](https://github.com/osodyssey)
+
+
 
 
 <!-- =========================

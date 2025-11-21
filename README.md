@@ -87,7 +87,7 @@
 
 ---
 ## Contributors
-- [Username](https://github.com/osodyssey)
+- [Username](https://github.com/osodyssey.png?size=200)
 
 ## 📦 Distribution & license
 - See `LICENSE` for repository terms.  

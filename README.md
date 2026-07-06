@@ -1,157 +1,353 @@
 <!-- =========================
-   JumpLander Coder 32B README
-   English first — Screenshot placeholders only in English
-   No API calls, no release-status mentions
-   Dark-friendly green accents and emojis
+   JumpLander README
+   English + Persian
+   GitHub / Hugging Face friendly
+   No 32B claims
+   No fake production claims
+   Transparent AI engineering identity
    ========================= -->
 
-<!-- Badges (dark-friendly, green) -->
-![status](https://img.shields.io/badge/status-production-brightgreen?style=for-the-badge&logo=github) 
-![jumpLander](https://img.shields.io/badge/JumpLander-Coder_32B-green?style=for-the-badge)
+# 🟢 JumpLander — AI Engineering for Software Development
 
-# 🟢 **JumpLander Coder 32B — Technical Overview (Standard Mode)**
+**JumpLander** is an AI-focused software engineering project built around coding agents, developer tools, programming datasets, lightweight models, and research-driven workflows for modern software development.
 
-**JumpLander Coder 32B** is an IDE-first, production-grade code model and platform built to accelerate interactive development workflows. This document focuses on the **Standard** mode — the low-latency configuration optimized for editor completions, fast iterations, and reliable developer assistance. 🟢
-
----
-
-## 🔍 Executive summary
-- **Primary goal:** speed up developer velocity with high-quality, context-aware completions and in-editor assistance. ✅  
-- **Design:** IDE-centric integrations, deterministic completion behaviors, and safety-oriented fallback heuristics. 🔰  
-- **Mode covered here:** **Standard** — tuned for low latency and rapid iteration (interactive use).
+JumpLander is not positioned as a single closed product or a one-time AI demo.  
+It is being developed as a long-term technical ecosystem for developers, focused on practical tools, transparent research, and real software engineering workflows.
 
 ---
 
-## ⚡ Key highlights
-- 🛠 **IDE-first integration:** inline completions, refactor suggestions, and test-case helpers.  
-- ⚡ **Low-latency inference (Standard):** responsive for live coding and pair-programming.  
-- ✅ **Automated assistance:** contextual linting, suggested fixes, and test generation.  
-- 📦 **Scalable deployment patterns:** single-shard low-latency and horizontal routing for throughput.  
-- 🔒 **Production-ready behavior:** safe defaults and predictable completions for engineering workflows.
+## 🔍 Overview
+
+JumpLander focuses on the intersection of **software engineering** and **artificial intelligence**.
+
+The project explores how AI can support real developer workflows through:
+
+- Coding assistants and agent-based tools
+- Programming-focused datasets
+- Lightweight experimental language models
+- Repository understanding systems
+- Debugging and refactoring workflows
+- Educational content for developers
+- Persian and English programming resources
+- AI-assisted software engineering experiments
+
+JumpLander is developed step by step, with an emphasis on transparency, experimentation, and practical engineering value.
 
 ---
 
-## ✨ Core features
-- Context-aware completions across files, docstrings and type hints.  
-- Automated small-scope refactors (rename, extract, inline).  
-- Unit test generation from signatures and examples.  
-- Static-check guidance with actionable patches.  
-- IDE plugins & CI integration patterns (editor + pipeline friendly).
+## 🎯 Mission
+
+The mission of JumpLander is to build a serious AI engineering ecosystem for programming.
+
+The project aims to support developers with better tools, clearer learning resources, structured datasets, and accessible AI-powered development workflows.
+
+JumpLander grows through real technical outputs:
+
+- Useful developer tools
+- Open and documented experiments
+- Structured programming datasets
+- Research notes and technical articles
+- Lightweight models and prototypes
+- Community-driven programming knowledge
+- Practical AI workflows for software development
 
 ---
 
-## 📊 Charts — place screenshots here (English doc only)
+## 🧩 Main Areas of Work
 
-### Chart — Throughput vs Accuracy  
-![alt text](https://www.jumplander.org/assets/chart/charts1.jpg)
+### 1. Developer Tools
 
-### Chart — Latency Breakdown  
-![alt text](https://www.jumplander.org/assets/chart/charts1%20(1).jpg)
-### Chart — Capability Radar  
-![alt text](https://www.jumplander.org/assets/chart/charts2.jpg)
+JumpLander works on tools that help developers write, understand, improve, and maintain code more efficiently.
 
----
+This includes experiments around:
 
-## 🔬 Comparative table — JumpLander Coder 32B (Standard) vs references (qualitative)
-
-| #  | Model / Variant                       | Primary strengths                                    | Throughput (Rel.) | Accuracy (Rel.) | Typical use-case |
-|---:|:-------------------------------------|:----------------------------------------------------:|:------------------:|:----------------:|:----------------:|
-| 1  | **JumpLander Coder 32B — Standard**  | Low-latency editor completions, IDE integration      | **High**           | High             | Live coding, pair programming |
-| 2  | GPT-4 family (code-capable)          | Advanced reasoning + code generation                 | Variable           | Very High        | Enterprise-critical workflows |
-| 3  | Gemini (code variants)               | Knowledge + code synthesis                           | Medium             | High             | Complex engineering tasks |
-| 4  | Anthropic Claude (code-tuned)        | Stable long outputs and robust behavior               | Medium             | High             | Text+code analysis |
-| 5  | Qwen2.5-Coder 32B                    | Code-focused training across languages               | Medium             | High             | Large multilingual codebases |
-| 6  | Code Llama (34B / code variants)     | Strong research performer, fine-tuning friendly      | Medium             | High             | Research & customization |
-| 7  | StarCoder (variants)                 | Community tooling & multi-language support           | Medium             | Medium           | Tooling & fine-tuning |
-| 8  | Codex (legacy/reference)             | Historical benchmark in codegen                      | Medium             | Medium-High      | Legacy integrations |
-| 9  | AlphaCode / research models          | Competitive coding task performance                  | Low-Medium         | High             | Algorithmic challenges |
-|10  | PaLM-2 (code-capable)                | Multi-purpose with code strengths                    | Medium             | High             | Research & product features |
-|11  | Mistral Code variants                | Lightweight & composable                             | Medium             | Medium-High      | Scalable services |
-|12  | WizardCoder / tuned code models      | API & library-aware generation                       | Medium             | High             | Rapid prototyping |
-|13  | InCoder / autoregressive models      | Local completion & repair focus                      | Medium             | Medium           | Local code completion |
-|14  | CodeGen (various sizes)              | Versatile generation across languages                | Medium             | Medium-High      | Templates & scaffolding |
-|15  | PolyCoder / research                 | Experimental code-focused models                     | Low-Medium         | Medium           | Academic benchmarking |
-|16  | BLOOM (code-adapted)                 | Community-driven, scalable                           | Medium             | Medium           | Research & community projects |
-|17  | SantaCoder / community variants      | Community-optimized for niche tasks                  | Medium             | Medium           | Internal tooling |
-|18  | Meta code-tuned families             | Engineered for industrial tasks                      | Medium             | High             | Enterprise engineering |
-|19  | Commercial enterprise code models    | Security, governance, integration focus              | Variable           | High             | Corporate deployments |
-|20  | Custom fine-tuned internal models    | Tailored to private datasets                         | Variable           | Variable         | Specialized needs |
-|21  | Emerging & experimental models       | Rapid innovation, variable maturity                  | Variable           | Variable         | R&D and prototyping |
+- Code explanation
+- AI-assisted debugging
+- Refactoring support
+- Test generation
+- Project scaffolding
+- Repository-aware workflows
+- Developer productivity tools
 
 ---
 
-## ✅ Recommended usage patterns
-- **Interactive development:** use JumpLander Coder 32B — Standard for editor completions and fast iteration.  
-- **CI / pre-merge checks:** combine completions with generated tests for automated validation.  
-- **Scaling:** deploy low-latency instances near editors; route heavy workloads to scaled inference pools.
+### 2. Coding Agents
 
-## Contributors
-[![Username](https://github.com/osodyssey.png?size=200)](https://github.com/osodyssey)
+JumpLander explores agentic workflows for software engineering.
 
-## 📦 Distribution & license
-- See `LICENSE` for repository terms.  
+The focus is on systems that can understand project context, inspect files, plan changes, suggest patches, and support multi-step development tasks.
 
-
-
-
-
-<!-- =========================
-   Persian version (فارسی)
-   ========================= -->
-
-# 🟢 جامپلندر Coder 32B — معرفی فنی (حالت Standard)
-
-**JumpLander Coder 32B** یک مدل تولید کد پیشرفته و پلتفرم با رویکرد IDE-first است که برای تسریع جریان کاری توسعه طراحی شده است. این سند فقط بر **حالت Standard** متمرکز است — پیکربندی کم‌تاخیر مناسب تکمیل در ویرایشگر و تکرار سریع.
+The goal is practical coding assistance, not unrealistic automation claims.
 
 ---
 
-## 🔍 خلاصه اجرایی
-- **هدف اصلی:** افزایش سرعت توسعه‌دهنده با تکمیل‌های زمینه‌محور و کمک درون‌ویرایشی. ✅  
-- **طراحی:** یکپارچگی با IDE، رفتارهای تکمیلی پیش‌بینی‌شده و مکانیزم‌های fallback ایمن. 🔰  
-- **حالت مورد پوشش:** **Standard** — کم‌تاخیر و مناسب استفاده تعاملی.
+### 3. Programming Datasets
+
+JumpLander develops and publishes datasets related to programming, debugging, software engineering, repository understanding, and AI-assisted development.
+
+These datasets are intended to support:
+
+- Research
+- Experimentation
+- Model evaluation
+- Fine-tuning experiments
+- Coding-agent behavior analysis
+- Future developer tool development
 
 ---
 
-## ⚡ نکات کلیدی
-- 🛠 **یکپارچه‌سازی IDE-first:** تکمیل درون‌ویرایشی، پیشنهادات ریفکتور و ابزارهای تولید تست.  
-- ⚡ **استنتاج کم‌تاخیر (Standard):** پاسخ‌دهی سریع برای کدنویسی زنده.  
-- ✅ **کمک خودکار:** lint زمینه‌ای، پیشنهاد اصلاحات و تولید تست.  
-- 📦 **قابلیت مقیاس‌پذیری:** از استقرار تک‌شارد کم‌تاخیر تا مسیرهای توزیع‌شده برای افزایش توان.  
-- 🔒 **رفتار مناسب تولید:** پیش‌فرض‌های ایمن و خروجی‌های پیش‌بینی‌پذیر برای جریان‌های مهندسی.
+### 4. Lightweight Models
+
+JumpLander experiments with smaller and more accessible language models for programming-related tasks.
+
+The focus is on practical foundations, Persian developer experience, educational workflows, and controlled model experiments before moving toward larger systems.
 
 ---
 
-## ✨ ویژگی‌های اصلی
-- تکمیل زمینه‌ای در چند فایل با توجه به docstring و type hints.  
-- پیشنهادات ریفکتور خودکار (rename, extract, inline).  
-- تولید تست واحد از امضاها و مثال‌ها.  
-- راهنمایی‌های استاتیک و پچ‌های قابل اعمال.  
-- پلاگین‌های IDE و الگوهای یکپارچه‌سازی CI.
+### 5. Research & Documentation
+
+Research and documentation are core parts of JumpLander.
+
+The project publishes and studies topics such as:
+
+- AI coding systems
+- RAG for programming
+- Coding agents
+- Dataset design
+- Model behavior
+- Developer workflows
+- Software engineering automation
+- Repository intelligence
 
 ---
 
-## 🔬 جدول مقایسه خلاصه‌ای (کیفی)
-(مشابه جدول انگلیسی — مقادیر کیفی نگهداری شده‌اند)
+## 🌐 Website
 
-| #  | مدل / نسخه                          | نقاط قوت اصلی                                    | سرعت نسبی | دقت نسبی | کاربرد معمول |
-|---:|:------------------------------------|:-------------------------------------------------:|:---------:|:--------:|:------------:|
-| 1  | **JumpLander Coder 32B — Standard** | تکمیل تعاملی با کمترین تاخیر، یکپارچگی IDE       | **بالا**  | بالا     | توسعه تعاملی |
-| 2  | GPT-4 family                         | استدلال قوی و تولید کد                            | متغیر     | خیلی بالا| محیط‌های سازمانی |
-| 3  | Gemini (code variants)               | ترکیب دانش و تولید کد                             | متوسط     | بالا     | پروژه‌های مهندسی پیچیده |
-| 4  | Anthropic Claude (code-tuned)        | خروجی‌های طولانی پایدار                            | متوسط     | بالا     | تحلیل متن+کد |
-| 5  | Qwen2.5-Coder 32B                    | تمرکز قوی روی وظایف کدنویسی                        | متوسط     | بالا     | پروژه‌های چندزبانه |
-| ...| (موارد دیگر مطابق جدول انگلیسی)    |                                                   |           |          |              |
+Official website:
+
+**[https://jumplander.org](https://jumplander.org)**
+
+The website includes project pages, technical articles, documentation, programming Q&A, research notes, and updates about the JumpLander ecosystem.
 
 ---
 
-## ✅ الگوی پیشنهادی استفاده
-- توسعه تعاملی: از حالت Standard داخل IDE برای تکمیل و ریفکتور استفاده کنید.  
-- CI: از تولید تست خودکار و بررسی قبل از merge بهره ببرید.  
-- استقرار: نمونه‌های کم‌تاخیر نزدیک محیط توسعه و خوشه‌های inference برای پردازش دسته‌ای.
+## 🛠️ Current Direction
+
+JumpLander is currently focused on building a realistic and technically defensible foundation.
+
+Current priorities include:
+
+- Improving the website and developer-facing content
+- Expanding programming datasets
+- Publishing technical research and articles
+- Developing early AI coding tools
+- Testing coding-agent workflows
+- Building a stronger open technical identity
+- Supporting Persian-speaking developers with better AI programming resources
+
+JumpLander is a long-term engineering project, not a one-step product launch.
 
 ---
 
-## 📄 مجوز و تماس
-- شرایط در فایل `LICENSE` درج می‌شود.  
+## 🤝 Contributing
+
+JumpLander welcomes collaboration around:
+
+- Programming datasets
+- Documentation
+- AI coding workflows
+- Open-source developer tools
+- Persian programming resources
+- Model evaluation and testing
+- Software engineering research
+- Coding-agent experiments
+
+Contributions, feedback, and technical discussions are valuable for improving the project over time.
 
 ---
+
+## 👤 Maintainer
+
+[![Os Odyssey](https://github.com/osodyssey.png?size=160)](https://github.com/osodyssey)
+
+**Os Odyssey**  
+Founder / Developer of JumpLander
+
+---
+
+## 📄 License
+
+License information should be defined clearly in the repository `LICENSE` file.
+
+Different parts of the JumpLander ecosystem may use different licenses depending on whether they are code, datasets, documentation, or research assets.
+
+---
+
+# 🟢 جامپلندر — مهندسی هوش مصنوعی برای توسعه نرم‌افزار
+
+**جامپلندر (JumpLander)** یک پروژه مهندسی نرم‌افزار و هوش مصنوعی است که روی ابزارهای کدنویسی، ایجنت‌های برنامه‌نویسی، دیتاست‌های فنی، مدل‌های سبک، مستندات و جریان‌های کاری توسعه نرم‌افزار تمرکز دارد.
+
+جامپلندر قرار نیست فقط یک محصول بسته یا یک نمایش کوتاه‌مدت از هوش مصنوعی باشد.  
+هدف این پروژه، ساخت مرحله‌به‌مرحله یک اکوسیستم واقعی و فنی برای برنامه‌نویسان است.
+
+---
+
+## 🔍 معرفی کوتاه
+
+جامپلندر روی ترکیب **برنامه‌نویسی** و **هوش مصنوعی کاربردی** کار می‌کند.
+
+تمرکز پروژه روی این بخش‌هاست:
+
+- ابزارهای کمک‌برنامه‌نویسی
+- ایجنت‌های کدنویسی
+- دیتاست‌های برنامه‌نویسی و مهندسی نرم‌افزار
+- مدل‌های سبک و آزمایشی
+- درک مخزن‌های کد
+- دیباگ و ریفکتور با کمک هوش مصنوعی
+- محتوای آموزشی و پژوهشی برای توسعه‌دهندگان
+- منابع فارسی و انگلیسی در حوزه برنامه‌نویسی
+- آزمایش جریان‌های کاری AI برای توسعه نرم‌افزار
+
+جامپلندر به‌صورت مرحله‌به‌مرحله توسعه داده می‌شود و تمرکز آن روی شفافیت، آزمایش، کیفیت فنی و ارزش واقعی برای برنامه‌نویسان است.
+
+---
+
+## 🎯 مأموریت
+
+مأموریت جامپلندر ساخت یک مسیر جدی و واقعی برای استفاده از هوش مصنوعی در توسعه نرم‌افزار است.
+
+این پروژه تلاش می‌کند به‌جای تکیه بر ادعاهای بزرگ، با خروجی‌های قابل مشاهده رشد کند:
+
+- ابزارهای واقعی برای توسعه‌دهندگان
+- آزمایش‌های مستند و شفاف
+- دیتاست‌های ساختاریافته برنامه‌نویسی
+- مقاله‌ها و یادداشت‌های فنی
+- مدل‌های سبک و نمونه‌های آزمایشی
+- دانش برنامه‌نویسی جامعه‌محور
+- جریان‌های کاری کاربردی برای توسعه نرم‌افزار با کمک AI
+
+---
+
+## 🧩 حوزه‌های اصلی فعالیت
+
+### ۱. ابزارهای توسعه‌دهنده
+
+جامپلندر روی ابزارهایی کار می‌کند که به برنامه‌نویسان کمک کنند کد را بهتر بنویسند، بفهمند، اصلاح کنند و توسعه دهند.
+
+این ابزارها می‌توانند شامل موارد زیر باشند:
+
+- توضیح کد
+- دیباگ با کمک AI
+- پیشنهاد ریفکتور
+- تولید تست
+- ساخت اولیه پروژه
+- تحلیل ساختار مخزن کد
+- ابزارهای افزایش بهره‌وری توسعه‌دهنده
+
+---
+
+### ۲. ایجنت‌های کدنویسی
+
+یکی از مسیرهای اصلی جامپلندر، بررسی و ساخت ایجنت‌هایی است که بتوانند در جریان واقعی توسعه نرم‌افزار کمک کنند.
+
+تمرکز این بخش روی کارهای واقعی و قابل اجراست؛ مثل فهمیدن ساختار پروژه، بررسی فایل‌ها، پیشنهاد تغییرات، کمک مرحله‌به‌مرحله و پشتیبانی از تصمیم‌های فنی توسعه‌دهنده.
+
+هدف این بخش، کمک عملی به کدنویسی است؛ نه ادعاهای غیرواقعی درباره اتوماسیون کامل.
+
+---
+
+### ۳. دیتاست‌های برنامه‌نویسی
+
+جامپلندر دیتاست‌هایی در حوزه برنامه‌نویسی، دیباگ، تحلیل کد، رفتار ایجنت‌ها و مهندسی نرم‌افزار منتشر و توسعه می‌دهد.
+
+این دیتاست‌ها می‌توانند برای موارد زیر استفاده شوند:
+
+- تحقیق
+- آزمایش
+- ارزیابی مدل‌ها
+- آزمایش fine-tuning
+- تحلیل رفتار ایجنت‌های کدنویسی
+- ساخت ابزارهای آینده توسعه نرم‌افزار
+
+---
+
+### ۴. مدل‌های سبک
+
+جامپلندر به‌صورت آزمایشی روی مدل‌های کوچک‌تر و قابل دسترس برای کارهای برنامه‌نویسی و آموزشی کار می‌کند.
+
+تمرکز اصلی در این مرحله، ساخت پایه‌های واقعی، قابل آزمایش و قابل دفاع است؛ نه ادعاهای بزرگ بدون زیرساخت کافی.
+
+---
+
+### ۵. پژوهش و مستندات
+
+پژوهش و مستندسازی بخش اصلی هویت جامپلندر است.
+
+موضوعاتی که در این مسیر بررسی می‌شوند شامل موارد زیر هستند:
+
+- سیستم‌های کدنویسی با هوش مصنوعی
+- RAG برای برنامه‌نویسی
+- ایجنت‌های کدنویسی
+- طراحی دیتاست
+- رفتار مدل‌ها
+- جریان کاری توسعه‌دهنده
+- اتوماسیون مهندسی نرم‌افزار
+- درک مخزن‌های کد
+
+---
+
+## 🌐 وب‌سایت رسمی
+
+**[https://jumplander.org](https://jumplander.org)**
+
+وب‌سایت جامپلندر شامل مقاله‌ها، مستندات، پرسش‌وپاسخ برنامه‌نویسی، معرفی پروژه‌ها، منابع آموزشی و گزارش‌های توسعه است.
+
+---
+
+## 🛠️ مسیر فعلی پروژه
+
+جامپلندر در حال حاضر روی ساخت یک پایه واقعی و قابل رشد تمرکز دارد.
+
+اولویت‌های فعلی پروژه:
+
+- بهبود ساختار سایت و محتوای فنی
+- توسعه دیتاست‌های برنامه‌نویسی
+- انتشار مقاله‌ها و پژوهش‌های کاربردی
+- ساخت ابزارهای اولیه کدنویسی با کمک AI
+- آزمایش ایجنت‌های توسعه نرم‌افزار
+- تقویت هویت فنی و متن‌باز پروژه
+- کمک به برنامه‌نویسان فارسی‌زبان برای دسترسی بهتر به منابع AI و کدنویسی
+
+جامپلندر یک مسیر بلندمدت است، نه یک محصول نمایشی کوتاه‌مدت.
+
+---
+
+## 🤝 همکاری
+
+جامپلندر از همکاری در زمینه‌های زیر استقبال می‌کند:
+
+- دیتاست‌های برنامه‌نویسی
+- مستندات فنی
+- ابزارهای متن‌باز
+- ایجنت‌های کدنویسی
+- منابع فارسی برنامه‌نویسی
+- ارزیابی مدل‌ها
+- پژوهش در مهندسی نرم‌افزار و AI
+- آزمایش جریان‌های کاری کدنویسی با ایجنت‌ها
+
+---
+
+## 👤 توسعه‌دهنده
+
+[![Os Odyssey](https://github.com/osodyssey.png?size=160)](https://github.com/osodyssey)
+
+**Os Odyssey**  
+Founder / Developer of JumpLander
+
+---
+
+## 📄 مجوز
+
+اطلاعات مجوز باید به‌صورت شفاف در فایل `LICENSE` مشخص شود.
+
+بخش‌های مختلف اکوسیستم جامپلندر ممکن است بسته به نوع محتوا، کد، دیتاست یا مستندات، مجوزهای متفاوتی داشته باشند.
